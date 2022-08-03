@@ -36,6 +36,7 @@ public class Bill {
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder("Hóa đơn số: " + this.id + "\n").append("Ngày: " + this.date + "\n").append("Nhân viên: "+this.staffName+"\n");
+
         for (BillItem d : this.items) {
             s.append(" " + d.getQuantity()).append(" " + d.getDrink().getName()).append("\n").append(" "+d.getPrice());
         }

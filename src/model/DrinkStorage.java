@@ -1,8 +1,4 @@
-package storage;
-
-import controller.DrinkController;
-import model.Category;
-import model.Drink;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;

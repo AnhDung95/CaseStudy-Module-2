@@ -7,6 +7,7 @@ public class BillItem {
     private Drink drink;
     private Integer quantity;
     private Long Price;
+    private Long totalPrice;
 
     public BillItem() {
     }
@@ -17,6 +18,7 @@ public class BillItem {
         this.drink = drink;
         this.quantity = quantity;
         this.Price = Price;
+        this.totalPrice=totalPrice;
     }
 
     public Drink getDrink() {
@@ -33,5 +35,13 @@ public class BillItem {
 
     public void setPrice(Long price) {
         this.Price = price;
+    }
+
+    public Long getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Long totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

@@ -1,4 +1,4 @@
-package storage;
+package model;
 
 import java.util.List;
 
