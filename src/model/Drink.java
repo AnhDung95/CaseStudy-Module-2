@@ -2,14 +2,16 @@ package model;
 
 public class Drink {
     private Long id;
+    private Category category;
     private String name;
-    private Long price;
+    private double price;
 
     public Drink() {
     }
 
-    public Drink(Long id, String name, Long price) {
+    public Drink(Long id, Category category, String name, Long price) {
         this.id = id;
+        this.category = category;
         this.name = name;
         this.price = price;
     }
@@ -18,23 +20,12 @@ public class Drink {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getPrice() {
-        return price;
-    }
-
-    public void setPrice(Long price) {
-        this.price = price;
+    @Override
+    public String toString() {
+        return this.id + ". " + this.category.getName() + " " + this.name + " " + this.price;
     }
 }

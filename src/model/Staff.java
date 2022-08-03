@@ -3,6 +3,7 @@ package model;
 public class Staff {
     private Long id;
     private String name;
+    private String DOB;
 
     public Staff() {
     }
@@ -26,5 +27,22 @@ public class Staff {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDOB() {
+        return DOB;
+    }
+
+    public void setDOB(String DOB) {
+        this.DOB = DOB;
+    }
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", DOB='" + DOB + '\'' +
+                '}';
     }
 }
