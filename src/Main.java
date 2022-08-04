@@ -1,9 +1,11 @@
 import view.HomePage;
-import view.OrderPage;
-
+import account.Login;
 public class Main {
     public static void main(String[] args) {
-//        new login.Login().loginSystem();
+        Login LG=new Login();
+        LG.run();
+
+//        new account.Login().loginSystem();
         HomePage home = new HomePage();
         home.showPage();
         home.action();

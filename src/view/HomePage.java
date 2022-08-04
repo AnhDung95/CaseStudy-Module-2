@@ -1,11 +1,8 @@
 package view;
 
 import model.Bill;
-
 import java.io.Serializable;
 import java.util.Scanner;
-
-
 public class HomePage implements Serializable {
     public static Bill bill;
     public void showPage() {
