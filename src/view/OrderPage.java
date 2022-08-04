@@ -47,7 +47,7 @@ public class OrderPage implements Serializable {
                 b.setItems(items);
                 System.out.println("Hóa đơn của khách");
                 System.out.println("Hóa đơn số: "+b);
-                System.out.println("Tổng tiền là: "+ OrderPage.getSum(items));
+                System.out.println("Tổng tiền: "+ OrderPage.getSum(items));
                 act = "0";
             }
         }

@@ -5,12 +5,12 @@ import java.io.Serializable;
 import java.util.Scanner;
 public class HomePage implements Serializable {
     public static Bill bill;
-    public void showPage() {
+    public static void showPage() {
         System.out.println("---TRANG CHỦ ---");
         System.out.println("1. Tạo đơn mới");
         System.out.println("2. Xem đơn hàng");
         System.out.println("3. Thoát");
-        System.out.print("Nhập yêu cầu: ");
+        System.out.print("Nhập yêu cầu: "+ "\n");
     }
 
     public void action() {
