@@ -2,11 +2,12 @@ package model;
 
 import view.OrderPage;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bill {
+public class Bill implements Serializable {
     private Long id;
     private String date;
     private List<BillItem> items;

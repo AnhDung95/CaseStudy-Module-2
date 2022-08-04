@@ -1,6 +1,8 @@
 package model;
 
-public class Drink {
+import java.io.Serializable;
+
+public class Drink implements Serializable {
     private Long id;
     private Category category;
     private long price;

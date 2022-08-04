@@ -1,6 +1,8 @@
 package model;
 
-public class BillItem {
+import java.io.Serializable;
+
+public class BillItem implements Serializable {
     private Long id;
     private Long billId;
     private Drink drink;

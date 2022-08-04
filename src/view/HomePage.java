@@ -2,11 +2,11 @@ package view;
 
 import model.Bill;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 
-
-public class HomePage {
+public class HomePage implements Serializable {
     public static Bill bill;
     public void showPage() {
         System.out.println("---TRANG CHỦ ---");
@@ -31,7 +31,6 @@ public class HomePage {
                     if (bill != null) {
                         System.out.println("Hóa đơn số: "+ bill);
                     }
-
                     break;
                 default:
                     System.out.print("Vui lòng nhập lại: " +"\n");
