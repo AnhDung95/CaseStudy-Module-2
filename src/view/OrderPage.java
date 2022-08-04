@@ -5,15 +5,19 @@ import model.Bill;
 import model.BillItem;
 import model.Drink;
 import model.DrinkStorage;
+import storage.IOFileBinary;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class OrderPage {
+public class OrderPage implements Serializable {
     private static final DrinkController controller = DrinkController.getInstance();
+    private static IOFileBinary<BillItem> ioFileBinary= IOFileBinary.getInstance();
 
     public static void showPage() {
+
         System.out.println("--- PLEASE ORDER ---");
         System.out.println("0. Trở về trang chủ");
         List<Drink> menu = controller.getMenu();
@@ -23,7 +27,7 @@ public class OrderPage {
         }
         System.out.print("Chọn đồ uống: ");
     }
-    public static void action(Scanner sc) {
+    public static Bill action(Scanner sc) {
         String act = sc.nextLine();
         Bill b = new Bill(1L);
         List<BillItem> items = new ArrayList<>();
@@ -33,8 +37,10 @@ public class OrderPage {
             System.out.print("Nhập số lượng: ");
             String q = sc.nextLine();
             items.add(new BillItem(1L, b.getId(), d, Integer.valueOf(q)));
+            ioFileBinary.writeFile("Drink.dat", (ArrayList<BillItem>) items);
             System.out.print("Tiếp tục?: [y/n] ");
             String c = sc.nextLine();
+            System.out.println("-----------------------------");
             if (c.equals("y")) {
                 System.out.print("Chọn đồ uống: ");
                 act = sc.nextLine();
@@ -47,8 +53,8 @@ public class OrderPage {
             }
         }
         System.out.println("Quay lại");
+        return b;
     }
-
     public static int getSum(List<BillItem> items) {
         int sum =0;
         for (int i = 0; i < items.size(); i++) {

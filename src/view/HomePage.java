@@ -1,8 +1,13 @@
 package view;
 
+import model.Bill;
+
 import java.util.Scanner;
 
+
+
 public class HomePage {
+    public static Bill bill;
     public void showPage() {
         System.out.println("---TRANG CHỦ ---");
         System.out.println("1. Tạo đơn mới");
@@ -18,15 +23,18 @@ public class HomePage {
             switch (act) {
                 case "1":
                     OrderPage.showPage();
-                    OrderPage.action(scanner);
+                    bill = OrderPage.action(scanner);
                     showPage();
                     break;
                 case "2":
-                    System.out.print("Đồ uống của khách");
-                    showPage();
+                    System.out.println("Hóa đơn của khách");
+                    if (bill != null) {
+                        System.out.println("Hóa đơn số: "+ bill);
+                    }
+
                     break;
                 default:
-                    System.out.print("Vui lòng nhập lại: ");
+                    System.out.print("Vui lòng nhập lại: " +"\n");
                     showPage();
             }
             act = scanner.nextLine();
