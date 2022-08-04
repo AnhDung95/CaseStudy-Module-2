@@ -4,7 +4,6 @@ import controller.DrinkController;
 import model.Bill;
 import model.BillItem;
 import model.Drink;
-import model.DrinkStorage;
 import storage.IOFileBinary;
 
 import java.io.Serializable;
@@ -37,7 +36,7 @@ public class OrderPage implements Serializable {
             System.out.print("Nhập số lượng: ");
             String q = sc.nextLine();
             items.add(new BillItem(1L, b.getId(), d, Integer.valueOf(q)));
-            ioFileBinary.writeFile("Drink.dat", (ArrayList<BillItem>) items);
+            ioFileBinary.writeFile("student.jmn", (ArrayList<BillItem>) items);
             System.out.print("Tiếp tục?: [y/n] ");
             String c = sc.nextLine();
             System.out.println("-----------------------------");

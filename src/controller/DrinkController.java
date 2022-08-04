@@ -3,9 +3,10 @@ package controller;
 import model.Drink;
 import model.DrinkStorage;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class DrinkController {
+public class DrinkController implements Serializable {
 
     private final DrinkStorage drinkStorage = DrinkStorage.getInstance();
     private static final DrinkController INSTANCE;

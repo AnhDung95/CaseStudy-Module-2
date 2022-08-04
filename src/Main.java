@@ -7,7 +7,5 @@ public class Main {
         HomePage home = new HomePage();
         home.showPage();
         home.action();
-
-
     }
 }
