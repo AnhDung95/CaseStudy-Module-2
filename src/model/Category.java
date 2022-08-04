@@ -20,9 +20,9 @@ public class Category {
     public static Category TEA1 = new Category(4L, "Hồng trà sữa");
     public static Category TEA2 = new Category(5L, "Trà vải");
     public static Category TEA3 = new Category(6L, "Trà mạn");
-    public static Category JUICE1 = new Category(3L, "Nước cam ép");
-    public static Category JUICE2 = new Category(3L, "Nước táo ép");
-    public static Category JUICE3 = new Category(3L, "Nước đào");
+    public static Category JUICE1 = new Category(7L, "Nước cam ép");
+    public static Category JUICE2 = new Category(8L, "Nước táo ép");
+    public static Category JUICE3 = new Category(9L, "Nước đào");
 
     public String getName() {
         return name;

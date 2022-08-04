@@ -23,16 +23,16 @@ public class DrinkStorage implements Storage<Drink> {
         return INSTANCE;
     }
 
-    private List<Drink> menu = new ArrayList<>(asList(
-            new Drink(1L, Category.COFFEE1, "Đen đá", 25000L),
-            new Drink(2L, Category.COFFEE2, "Nâu đá", 30000L),
-            new Drink(3L, Category.COFFEE3, "Bạc xỉu", 35000L),
-            new Drink(4L, Category.TEA1, "Hồng trà sữa", 40000L),
-            new Drink(5L, Category.TEA2, "Trà vải", 35000L),
-            new Drink(6L, Category.TEA3, "Trà mạn", 30000L),
-            new Drink(7L, Category.JUICE1, "Nước cam ép", 35000L),
-            new Drink(8L, Category.JUICE2, "Nước táo ép", 35000L),
-            new Drink(9L, Category.JUICE3, "Nước đào", 35000L)
+    public static List<Drink> menu = new ArrayList<>(asList(
+            new Drink(1L, Category.COFFEE1,25000),
+            new Drink(2L, Category.COFFEE2,30000),
+            new Drink(3L, Category.COFFEE3,35000),
+            new Drink(4L, Category.TEA1,40000),
+            new Drink(5L, Category.TEA2,35000),
+            new Drink(6L, Category.TEA3,30000),
+            new Drink(7L, Category.JUICE1,35000),
+            new Drink(8L, Category.JUICE2,35000),
+            new Drink(9L, Category.JUICE3,35000)
     ));
     @Override
     public void store(Drink drink) {

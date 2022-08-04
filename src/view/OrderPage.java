@@ -4,6 +4,7 @@ import controller.DrinkController;
 import model.Bill;
 import model.BillItem;
 import model.Drink;
+import model.DrinkStorage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,14 +23,13 @@ public class OrderPage {
         }
         System.out.print("Chọn đồ uống: ");
     }
-
     public static void action(Scanner sc) {
         String act = sc.nextLine();
         Bill b = new Bill(1L);
         List<BillItem> items = new ArrayList<>();
         while (!act.equals("0")) {
             Drink d = controller.findDrinkById(Long.valueOf(act));
-            System.out.println("Bạn chọn " + d.getName());
+            System.out.println("Bạn chọn " + d.getCategory().getName());
             System.out.print("Nhập số lượng: ");
             String q = sc.nextLine();
             items.add(new BillItem(1L, b.getId(), d, Integer.valueOf(q)));
@@ -41,12 +41,20 @@ public class OrderPage {
             } else {
                 b.setItems(items);
                 System.out.println("Hóa đơn của khách");
-                System.out.println(b);
+                System.out.println("Hóa đơn số: "+b);
+                System.out.println("Tổng tiền là: "+ OrderPage.getSum(items));
                 act = "0";
             }
-
-
         }
         System.out.println("Quay lại");
     }
+
+    public static int getSum(List<BillItem> items) {
+        int sum =0;
+        for (int i = 0; i < items.size(); i++) {
+             sum += items.get(i).getTotalPrice();
+        }
+        return sum;
+    }
+
 }

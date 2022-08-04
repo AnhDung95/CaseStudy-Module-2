@@ -1,6 +1,9 @@
 package model;
 
+import view.OrderPage;
+
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Bill {
@@ -8,7 +11,7 @@ public class Bill {
     private String date;
     private List<BillItem> items;
     public Staff staffName;
-
+    private static ArrayList<Drink> drinkArrayList = new ArrayList<>();
     public Bill() {
     }
 
@@ -35,11 +38,11 @@ public class Bill {
 
     @Override
     public String toString() {
-        StringBuilder s = new StringBuilder("Hóa đơn số: " + this.id + "\n").append("Ngày: " + this.date + "\n").append("Nhân viên: "+this.staffName+"\n");
-
+        StringBuilder s = new StringBuilder(this.id + "\n").append("Ngày: " + this.date + "\n").append("Nhân viên: "+this.staffName+"\n");
         for (BillItem d : this.items) {
-            s.append(" " + d.getQuantity()).append(" " + d.getDrink().getName()).append("\n").append(" "+d.getPrice());
+            s.append("Số lượng: " + d.getQuantity()).append(" " + d.getDrink().getCategory().getName() +"\n");//append("Tổng tiền: "+);
         }
+
         return s.toString();
     }
 }
