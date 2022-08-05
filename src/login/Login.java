@@ -44,7 +44,7 @@ public class Login {
     public void loginManager(){
         try{
             System.out.println("┎──────────────[ĐĂNG NHẬP]──────────────┒");
-            System.out.print("┠ ▹ Nhập tài khoản: ");
+            System.out.print("┠ ▹ Nhập tài khoản: "                       );
             String account = scanner.nextLine();
             System.out.print("┠ ▹ Nhập mật khẩu: ");
             String password = scanner.nextLine();

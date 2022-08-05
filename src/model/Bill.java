@@ -39,7 +39,7 @@ public class Bill implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder s = new StringBuilder(this.id + "\n").append("Ngày: " + this.date + "\n").append("Nhân viên: "+this.staffName+"\n");
+        StringBuilder s = new StringBuilder(this.id + "\n").append("Ngày: " + this.date + "\n").append("Nhân viên: Nguyễn Anh Dũng"+"\n");
         for (BillItem d : this.items) {
             s.append("Số lượng: " + d.getQuantity()).append(" " + d.getDrink().getCategory().getName() +"\n");
         }
