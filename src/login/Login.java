@@ -21,7 +21,7 @@ public class Login {
     public void menuLogin() {
         do {
             System.out.println("╔============================================╗");
-            System.out.println("║   ▂ ▃ ▅ ▆ █   TAM TRINH CAFE  █ ▆ ▅ ▃ ▂    ║");
+            System.out.println("║   ▂ ▃ ▅ ▆ █  TIMELINE COFFEE  █ ▆ ▅ ▃ ▂    ║");
             System.out.println("╠============================================╣");
             System.out.println("║>[1]. Đăng nhập                             ║");
             System.out.println("║>[0]. Thoát                                 ║");
@@ -82,49 +82,4 @@ public class Login {
         }
         return false;
     }
-//    public void creatAccount(){
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("┎──────────────[ĐĂNG KÝ]──────────────┒");
-//        System.out.println("[\uD83D\uDD11] Mời bạn nhập thông tin:");
-//        System.out.println("--------------------------------------");
-//        String accountName = checkAccountName();
-//        String accountPassword = checkPassword();
-//        System.out.print("┠ ▹ Nhập tên: ");
-//        String name = scanner.nextLine();
-//        System.out.print("┠ ▹ Nhập địa chỉ: ");
-//        String address = scanner.nextLine();
-//        System.out.println("┖─────────────────────────────────────┚");
-//    }
-//    public String checkAccountName() {
-//        String accountUser;
-//        while (true) {
-//            System.out.print("┠ ▹ Nhập tài khoản (8 - 12 ký tự (a,1,...): ");
-//            String account = scanner.nextLine();
-//            if (!validate.validateAccount(account)) {
-//                System.out.println("[❌] Tài khoản không hợp lệ !!!");
-////                System.out.println(">[Chú ý]: Tài khoản phải từ 8 - 12 ký tự (a,1,...)");
-//                System.out.println("---------------------------------------------------");
-//            } else {
-//                accountUser = account;
-//                break;
-//            }
-//        }
-//        return accountUser;
-//    }
-//    public String checkPassword() {
-//        String passwordUser;
-//        while (true) {
-//            System.out.print("┠ ▹ Nhập passwword (8 - 16 ký tự (a,A,1,...)): ");
-//            String password = scanner.nextLine();
-//            if (!validate.validatePassword(password)) {
-//                System.out.println("[❌] Mật khẩu không hợp lệ !!!");
-////                System.out.println(">[Chú ý]: Mật khẩu phải từ 8 - 16 ký tự (a,A,1,...)hoặc ký tự đặc biệt");
-//                System.out.println("-----------------------------------------");
-//            } else {
-//                passwordUser = password;
-//                break;
-//            }
-//        }
-//        return passwordUser;
-//    }
 }

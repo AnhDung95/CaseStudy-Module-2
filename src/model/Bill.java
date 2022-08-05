@@ -1,6 +1,6 @@
 package model;
 
-import view.OrderPage;
+import account.AccountAdmin;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -11,8 +11,8 @@ public class Bill implements Serializable {
     private Long id;
     private String date;
     private List<BillItem> items;
-    public Staff staffName;
-    private static ArrayList<Drink> drinkArrayList = new ArrayList<>();
+    public String staffName;
+    private static ArrayList<Drink> drinkArray1List = new ArrayList<>();
     public Bill() {
     }
 
@@ -29,11 +29,11 @@ public class Bill implements Serializable {
         this.items = items;
     }
 
-    public Staff getStaffName() {
+    public String getStaffName() {
         return staffName;
     }
 
-    public void setStaffName(Staff staffName) {
+    public void setStaffName(String staffName) {
         this.staffName = staffName;
     }
 
@@ -41,9 +41,8 @@ public class Bill implements Serializable {
     public String toString() {
         StringBuilder s = new StringBuilder(this.id + "\n").append("Ngày: " + this.date + "\n").append("Nhân viên: "+this.staffName+"\n");
         for (BillItem d : this.items) {
-            s.append("Số lượng: " + d.getQuantity()).append(" " + d.getDrink().getCategory().getName() +"\n");//append("Tổng tiền: "+);
+            s.append("Số lượng: " + d.getQuantity()).append(" " + d.getDrink().getCategory().getName() +"\n");
         }
-
         return s.toString();
     }
 }

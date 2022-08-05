@@ -10,7 +10,6 @@ public class DrinkStorage implements Storage<Drink> {
 
     private DrinkStorage() {
     }
-
     static {
         try {
             INSTANCE = new DrinkStorage();
@@ -18,7 +17,6 @@ public class DrinkStorage implements Storage<Drink> {
             throw new RuntimeException("Exception occured in creating singleton instance");
         }
     }
-
     public static DrinkStorage getInstance() {
         return INSTANCE;
     }
